@@ -1,0 +1,18 @@
+class Result {
+
+ public static void plusMinus(List<Integer> arr) {
+   
+    int p=0,n=0,z=0;
+    for(int i:arr)
+    {
+        if(i>0) p++;
+        else if(i<0)    n++;
+        else    z++;
+    }
+    float k=arr.size();
+    System.out.println(p/k);
+    System.out.println(n/k);
+    System.out.println(z/k);
+    }
+
+}

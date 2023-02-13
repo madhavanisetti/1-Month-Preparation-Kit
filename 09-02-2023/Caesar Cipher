@@ -1,0 +1,27 @@
+public static String caesarCipher(String s, int k) {
+    // Write your code here
+    if(k>26)    k=k%26;
+    String temp="";
+    for(int i=0;i<s.length();i++)
+    {
+        char letter=s.charAt(i);
+        if(!Character.isAlphabetic(letter)) temp+=Character.toString(letter);
+        else if(Character.isLowerCase(letter))
+        {
+            int k1=(int)letter;
+            k1+=k;
+            if(k1>122) k1=k1-122+96;
+            char k2=(char)k1;
+            temp+=Character.toString(k2); 
+        }
+        else
+        {
+            int k1=(int)letter;
+            k1+=k;
+            if(k1>90) k1=k1-90+64;
+            char k2=(char)k1;
+            temp+=Character.toString(k2); 
+        }
+    }
+    return temp;
+    }
